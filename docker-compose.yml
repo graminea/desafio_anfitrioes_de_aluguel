@@ -1,0 +1,23 @@
+services:
+  python_api:
+    build:
+      context: ./backend_python_API
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend_python_API:/app
+      - ./backend_python_API/database.db:/app/database.db
+    environment:
+      - FLASK_APP=API_acomodacoes.py
+      - FLASK_RUN_HOST=0.0.0.0
+    command: ["python", "/app/API_acomodacoes.py"]
+
+  react_app:
+    build:
+      context: ./frontend_react
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - python_api
