@@ -37,18 +37,19 @@ O projeto é dividido em duas partes principais:
 - [Docker]
 - [Docker Compose]
 
-### Passos:
-
 1. Clone este repositório:
+   ```bash
    git clone https://github.com/graminea/desafio_anfitrioes_de_aluguel.git
    cd desafio_anfitrioes_de_aluguel
-
-2. Com o docker aberto, execute o Docker Compose:
+   ```
+3. Com o docker aberto, execute o Docker Compose:
+   ```bash
    docker-compose up --build
-
-3. Acesse a aplicação no navegador:
+   ```
+5. Acesse a aplicação no navegador:
+   ```
    http://localhost
-
+   ```
 ## Contribuição
 
 Para contribuir:
@@ -67,4 +68,6 @@ Para contribuir:
    git push origin minha-feature
    ```
 5. Abra um Pull Request.
+
+
 
