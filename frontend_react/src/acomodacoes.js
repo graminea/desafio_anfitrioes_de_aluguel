@@ -7,7 +7,7 @@ function Acomodacoes() {
 
   // Função para buscar acomodações por cidade
   const buscarAcomodacao = () => {
-    fetch(`http://127.0.0.1:5000/acomodacoes?cidade=${cidade}`)
+    fetch(`http://localhost:5000/acomodacoes?cidade=${cidade}`)
       .then((res) => res.json())
       .then((data) => {
         setAcomodacoes(data);
@@ -19,7 +19,7 @@ function Acomodacoes() {
 
   // Função para buscar acomodação por ID
   const buscarPorID = () => {
-    fetch(`http://127.0.0.1:5000/acomodacoes/${id}`)
+    fetch(`http://localhost:5000/acomodacoes/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setAcomodacoes([data]); 
