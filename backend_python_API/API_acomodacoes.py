@@ -55,7 +55,7 @@ def get_acomodação_por_id(id):
         return jsonify({"erro": "Acomodação não encontrada"}), 404
 
 if __name__ == '__main__':
-    sistema_aluguel.run(host="0.0.0.0", port=5000)  # roda a API na porta 5000, localhost. 0.0.0.0
+    sistema_aluguel.run(host="0.0.0.0", port=5000)  # roda a API na porta 5000, localhost. 0.0.0.0 para aceitar request de fora do container do backend.
 
 
 
